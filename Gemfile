@@ -64,3 +64,6 @@ end
 
 gem 'react_on_rails', '13.0.1'
 gem 'shakapacker', '6.4.0'
+gem "mini_racer", platforms: :ruby
+
+gem "foreman", "~> 0.87.2"
