@@ -14,8 +14,10 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import PeopleOutlineIcon from '@mui/icons-material/PeopleOutline';
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import Menu from '@mui/material/Menu';
 import Utils from '../../utils/Utils';
+import Grid from '@mui/material/Grid';
 import axios from "axios";
 
 const currentUser = Utils.getCurrentUser()
@@ -80,9 +82,11 @@ function NavigationBar(props) {
 								open={Boolean(anchorEl)}
 								onClose={handleClose}
 							>
-								<Button variant="link" href={currentUser.sign_out_link}>
-									<ExitToAppIcon sx={{ mr: 2 }} /> Sign Out
-								</Button>
+								<Grid container direction="column" justifyContent="flex-start">
+									<Button variant="link" href={currentUser.sign_out_link}>
+										<ExitToAppIcon sx={{ mr: 2 }} /> Sign Out
+									</Button>
+								</Grid>
 							</Menu>
 						</div>
 					)}

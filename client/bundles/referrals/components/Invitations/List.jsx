@@ -12,6 +12,8 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import CheckBoxIcon from '@mui/icons-material/CheckBox';
+import InfoIcon from '@mui/icons-material/Info';
 import { isEmpty } from 'lodash';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -41,7 +43,7 @@ export default function CustomizedTables(props) {
 		return (
 			<Container>
 				<Button variant="contained" href={new_invitation_link} sx={{ mt: 8, mb: 4 }}>
-					<AddCircleOutlineIcon sx={{ mr: 2 }} /> Send New Invitation
+					<AddCircleOutlineIcon sx={{ mr: 2 }} /> New Invitation
 				</Button>
 				<TableContainer component={Paper} sx={{ mt: 8, mb: 4 }}>
 					<Table sx={{ minWidth: 700 }} aria-label="customized table">
@@ -58,7 +60,7 @@ export default function CustomizedTables(props) {
 									<StyledTableCell component="th" scope="row">
 										{row.email}
 									</StyledTableCell>
-									<StyledTableCell align="right">{row.accepted ? 'True' : 'False'}</StyledTableCell>
+									<StyledTableCell align="right">{row.accepted ? <CheckBoxIcon sx={{ color: '#43a047' }} /> : <InfoIcon sx={{ color: '#c62828' }} />}</StyledTableCell>
 									<StyledTableCell align="right">{row.sent_at}</StyledTableCell>
 								</StyledTableRow>
 							))}
@@ -68,13 +70,15 @@ export default function CustomizedTables(props) {
 			</Container>
 		);
 	} else {
-		<Container sx={{ mt: 8, mb: 4 }}>
-			<Typography variant="h5" align="center" color="text.secondary" component="p">
-				No Invitations Sent.
-			</Typography>
-			<Link href={new_invitation_link} variant="subtitle1" color="text.secondary">
-				Invite Now!
-			</Link>
-		</Container>
+		return (
+			<Container sx={{ mt: 8, mb: 4 }}>
+				<Typography variant="h5" align="center" color="text.secondary" component="p">
+					No Invitations Sent.
+				</Typography>
+				<Button variant="contained" href={new_invitation_link}>
+					<AddCircleOutlineIcon sx={{ mr: 2 }} /> New Invitation
+				</Button>
+			</Container>
+		)
 	}
 }

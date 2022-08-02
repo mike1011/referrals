@@ -12,6 +12,7 @@ import SignInPage from '../bundles/referrals/components/SignIn/SignIn';
 import SignUpPage from '../bundles/referrals/components/SignUp/SignUp';
 import ListInvitations from '../bundles/referrals/components/Invitations/List';
 import NewInvitation from '../bundles/referrals/components/Invitations/New';
+import EditInvitation from '../bundles/referrals/components/Invitations/Edit';
 import HelloWorld from '../bundles/referrals/components/HelloWorld';
 
 // This is how react_on_rails can see the HelloWorld in the browser.
@@ -22,5 +23,6 @@ ReactOnRails.register({
   SignInPage,
   SignUpPage,
   ListInvitations,
-  NewInvitation
+  NewInvitation,
+  EditInvitation
 });

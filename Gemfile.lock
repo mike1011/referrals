@@ -115,6 +115,15 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    launchy (2.5.0)
+      addressable (~> 2.7)
+    letter_opener (1.8.1)
+      launchy (>= 2.2, < 3)
+    letter_opener_web (2.0.0)
+      actionmailer (>= 5.2)
+      letter_opener (~> 1.7)
+      railties (>= 5.2)
+      rexml
     libv8-node (16.10.0.0-x86_64-linux)
     loofah (2.18.0)
       crass (~> 1.0.2)
@@ -253,6 +262,7 @@ DEPENDENCIES
   devise_invitable (~> 2.0.0)
   foreman (~> 0.87.2)
   jbuilder
+  letter_opener_web
   mini_racer
   pg (~> 1.1)
   puma (~> 5.0)

@@ -6,7 +6,7 @@ class InvitationSerializer < ApplicationSerializer
   end
 
   def sent_at
-    object.invitation_sent_at
+    object&.invitation_sent_at&.strftime('%a %d %b %y')
   end
 
   def new_invitation_url

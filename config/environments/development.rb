@@ -69,4 +69,9 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
+  ##changing from letter_opener to letter_opener_web to browse emails easily
+  ###ADDED FOR LETTER OPENER AND DEVISE MAILERS
+  config.action_mailer.delivery_method = :letter_opener
+  Rails.application.routes.default_url_options[:host] = 'localhost:5000'
+
 end

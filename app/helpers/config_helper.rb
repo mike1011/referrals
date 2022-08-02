@@ -21,7 +21,7 @@ def current_user_attrs
 				id: current_user.id,
 				email: current_user.email,
 				sign_in_link: new_user_session_path,
-				sign_out_link: destroy_user_session_path
+				sign_out_link: destroy_user_session_path,
 		}
 end
 
