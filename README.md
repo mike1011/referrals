@@ -62,12 +62,12 @@ Worth to note that It uses separate folder `client` to manage all react front en
 		
 	== register API ===
 	
-	`curl -XPOST -H "Content-Type: application/json" -d '{ "user": { "email": "mike1011@gmail.com", "password": "password123" } }' http://localhost:3000/api/v1/users`
+	curl -XPOST -H "Content-Type: application/json" -d '{ "user": { "email": "mike1011@gmail.com", "password": "password123" } }' http://localhost:3000/api/v1/users
 
 	== login API ==
 	
-	`curl -XPOST -H "Content-Type: application/json" -d '{ "user": { "email": "mike1011@gmail.com", "password": "password123" } }' http://localhost:3000/api/v1/users/sign_in`
+	curl -XPOST -H "Content-Type: application/json" -d '{ "user": { "email": "mike1011@gmail.com", "password": "password123" } }' http://localhost:3000/api/v1/users/sign_in
 
 	== logout api ==
 	
-	`curl -XDELETE -H "Content-Type: application/json" -d '{ "user": { "email": "mike1011@gmail.com", "password": "password123" } }' http://localhost:3000/api/v1/users/sign_out`
+	curl -XDELETE -H "Content-Type: application/json" -d '{ "user": { "email": "mike1011@gmail.com", "password": "password123" } }' http://localhost:3000/api/v1/users/sign_out
