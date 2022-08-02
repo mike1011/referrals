@@ -1,7 +1,7 @@
 # Note: You must restart bin/webpacker-dev-server for changes to take effect
 
 default: &default
-  source_path: app/javascript
+  source_path: client
   source_entry_path: packs
   public_root_path: public
   public_output_path: packs
@@ -18,7 +18,7 @@ default: &default
 development:
   <<: *default
   # This is false since we're running `bin/webpacker -w` in Procfile.dev-setic
-  compile: false
+  compile: true
 
   # Reference: https://webpack.js.org/configuration/dev-server/
   dev_server:
@@ -26,7 +26,9 @@ development:
     host: localhost
     port: 3035
     # Hot Module Replacement updates modules while the application is running without a full reload
-    hmr: true
+    hmr: false
+    # Inline should be set to true if using HMR
+    inline: true
     client:
       # Should we show a full-screen overlay in the browser when there are compiler errors or warnings?
       overlay: true

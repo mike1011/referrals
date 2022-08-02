@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <%= render_app_data_script %>
     <%= stylesheet_link_tag "application" %>
-    <%= javascript_pack_tag "application" %>
+    <%= javascript_pack_tag('client-bundle',
+                                       'data-turbolinks-track': true,
+                                       defer: true) %>
   </head>
 
   <body>
-    <%= yield %>
+    <% if notice || alert %>
+        <%= react_component "Alerts", props: {message: alert || notice}, prerender: false %>
+    <%end%>
+    <%= react_component "NavigationBar", prerender: false %>
+    <div class="container">
+      <%= yield %>
+    </div>    
   </body>
 </html>

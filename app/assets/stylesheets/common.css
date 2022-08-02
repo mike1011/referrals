@@ -1,0 +1,8 @@
+#error_explanation {
+	padding-left: 24px;
+	padding-right: 24px;
+	border: 2px solid red;
+	margin: 10px 20px;
+	color: red;
+	background: #ff000012;
+}
