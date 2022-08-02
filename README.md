@@ -3,6 +3,8 @@
 This README enlists the requirement and the steps needed to run this application build on Rails 7, Ruby 3, Shakapacker to manage javscript modules, Material UI for CSS and Reactjs for frontend. It use Postgresql as database and devise for basic authentication for both html and api requests.
 Rspec is TODO.
 
+Worth to note that It uses separate folder `client` to manage all react front end code.
+
 - Ruby version
 
   `3.0.1`
