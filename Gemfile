@@ -68,5 +68,8 @@ gem 'shakapacker', '6.4.0'
 gem "mini_racer", platforms: :ruby
 gem "foreman", "~> 0.87.2"
 gem "devise", "~> 4.8"
+gem 'devise-jwt'
 gem 'devise_invitable', '~> 2.0.0'
 gem 'active_model_serializers', '~> 0.9.7'
+gem 'rack-cors'
+gem 'dotenv-rails', groups: [:development, :test]
