@@ -17,6 +17,8 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 const theme = createTheme();
 
+console.log("===new called===");
+
 const New = (props) => {
 	const [name, setName] = useState(props.name);
 	const { title } = props;

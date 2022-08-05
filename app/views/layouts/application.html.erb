@@ -7,9 +7,6 @@
     <%= csp_meta_tag %>
     <%= render_app_data_script %>
     <%= stylesheet_link_tag "application" %>
-    <%= javascript_pack_tag('client-bundle',
-                                       'data-turbolinks-track': true,
-                                       defer: true) %>
   </head>
 
   <body>
@@ -20,5 +17,10 @@
     <div class="container">
       <%= yield %>
     </div>    
+
+    <%= javascript_pack_tag('client-bundle', 
+                                       'data-turbolinks-track': true,
+                                       defer: true) %>
+
   </body>
 </html>

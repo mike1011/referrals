@@ -6,23 +6,19 @@ import 'jquery';
 import 'jquery-ujs';
 
 // import HelloWorld from '../bundles/HelloWorld/components/HelloWorld';
-import Alerts from '../bundles/referrals/components/Alerts/Alerts';
-import NavigationBar from '../bundles/referrals/components/NavigationBar/NavigationBar';
-import SignInPage from '../bundles/referrals/components/SignIn/SignIn';
-import SignUpPage from '../bundles/referrals/components/SignUp/SignUp';
-import ListInvitations from '../bundles/referrals/components/Invitations/List';
-import NewInvitation from '../bundles/referrals/components/Invitations/New';
-import EditInvitation from '../bundles/referrals/components/Invitations/Edit';
-import HelloWorld from '../bundles/referrals/components/HelloWorld';
+import Alerts from '../bundles/common/components/Alerts/Alerts';
+import NavigationBar from '../bundles/common/components/NavigationBar/NavigationBar';
+import SignInPage from '../bundles/common/components/SignIn/SignIn';
+import SignUpPage from '../bundles/common/components/SignUp/SignUp';
+import NewInvitation from '../bundles/invitations/components/New';
+import EditInvitation from '../bundles/invitations/components/Edit';
+import ListInvitations from '../bundles/invitations/components/List';
 
 // This is how react_on_rails can see the HelloWorld in the browser.
 ReactOnRails.register({
   NavigationBar,
-  HelloWorld,
   Alerts,
   SignInPage,
   SignUpPage,
-  ListInvitations,
-  NewInvitation,
-  EditInvitation
+  EditInvitation, NewInvitation, ListInvitations
 });

@@ -14,6 +14,7 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const theme = createTheme();
+console.log("===edit called===");
 
 export default function Edit(props) {
 	const { title, submit } = props;
